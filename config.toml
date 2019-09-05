@@ -1,0 +1,4 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Marteal Cycle Works"
+theme = "MCW"

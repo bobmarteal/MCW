@@ -1,0 +1,39 @@
+/* 
+    Name: _vars
+    Descr: All of the vars
+*/
+/* 
+    Name: _container
+    Descr: Style the outer main container
+*/
+div {
+  background: red; }
+
+/* 
+    Name: _header
+    Descr: Styles the main page header
+*/
+/* 
+    Name: _text
+    Descr: Main text styles for website
+*/
+/* 
+    Name: _headings
+    Descr: Style all headings in the website
+*/
+h1 {
+  color: green; }
+
+/* 
+    Name: _mainNav
+    Descr: Styles responsive and full version of main navigaiton
+*/
+/* 
+    Name: _images
+    Descr: Style all images
+    -pano
+    -inline
+    -shows
+*/
+
+/*# sourceMappingURL=styles.css.map */

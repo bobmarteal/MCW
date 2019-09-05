@@ -1,0 +1,18 @@
+{{ $inServerMode := .Site.IsServer }}
+
+{{ $sass         := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . }}
+{{ $sassIncludes := (slice "assets/dependencies/" "assets/scss/" "assets/scss/vendors/" "assets/sass") }}
+{{ $cssTarget    := "css/styles.css" }}
+{{ $cssOpts      := cond ($inServerMode) (dict "targetPath" $cssTarget "enableSourceMap" true "includePaths" $sassIncludes) (dict "targetPath" $cssTarget "includePaths" $sassIncludes "outputStyle" "compressed") }}
+
+{{ if or ($inServerMode) (eq hugo.Environment "local") }}
+
+{{ $css := $sass | toCSS $cssOpts }}
+<link rel="stylesheet" href="{{ $css.Permalink | absURL }}" media="screen">
+
+{{ else }}
+
+{{ $css := $sass | toCSS $cssOpts | resources.PostCSS | fingerprint }}
+<link rel="stylesheet" href="{{ $css.Permalink | absURL }}" integrity="{{ $css.Data.Integrity }}" media="screen">
+
+{{ end }}
