@@ -1,0 +1,3 @@
+[submodule "themes/MCWweb"]
+	path = themes/MCWweb
+	url = https://github.com/hakuoku/saito-boilerplate.git

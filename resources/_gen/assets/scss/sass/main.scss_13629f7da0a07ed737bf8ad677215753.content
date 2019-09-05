@@ -2,12 +2,16 @@
     Name: _vars
     Descr: All of the vars
 */
+:root {
+  --max-width: 1440px; }
+
 /* 
     Name: _container
     Descr: Style the outer main container
 */
-div {
-  background: red; }
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto; }
 
 /* 
     Name: _header
