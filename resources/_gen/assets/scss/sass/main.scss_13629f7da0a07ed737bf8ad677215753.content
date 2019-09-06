@@ -26,7 +26,12 @@
     Descr: Style all headings in the website
 */
 h1 {
-  color: green; }
+  width: 250px;
+  height: 250px;
+  background: url(/images/MCW-logo.svg);
+  font-size: 100px;
+  color: red;
+  text-indent: -9999px; }
 
 /* 
     Name: _mainNav

@@ -1,3 +1,5 @@
+$bigLogo: unquote("{{ .Site.Params.bigLogo | safeCSS }}");
+$bgColor: unquote("{{ .Site.Params.bgColor | safeCSS }}");
 
 @import "vars";
 @import "container";

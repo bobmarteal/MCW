@@ -1,4 +1,10 @@
 baseURL = "https://martealcycleworks.netlify.com/"
 languageCode = "en-us"
 title = "Marteal Cycle Works"
-theme = "MCWweb"
+
+# Logos
+[params]
+bigLogo = "/images/MCW-logo.svg"
+bgColor = "red"
+
+
